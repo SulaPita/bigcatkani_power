@@ -1,0 +1,308 @@
+/*森林圖*/
+.banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    position: relative;
+}
+.banner img {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100vw;
+}
+.banner .top-image {
+    position: absolute; /*指定位置 */
+    top: 30%; /* 上方位置 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 將圖片的水平中心對齊容器中心 */
+    z-index: 2; /* 確保圖片位於文字內容的上方 */
+    max-width: 40%; /* 根據需要調整圖片的大小 */
+}
+.banner-content {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+    top: 15%; /* 上方位置 */
+}
+/* 固定用 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#worldview {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 20px 20px;
+    color: rgba(255, 255, 255, 0);
+}
+
+#worldview .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 自動換行，每列最小 250px */
+    gap: 20px; /* 圖片之間的間距 */
+    justify-items: center; /* 圖片水平居中 */
+    align-items: center; /* 圖片垂直居中 */
+    padding: 20px; /* 網格內邊距 */
+    width: 80%; /* 限制網格寬度 */
+    height: 80vh; /* 限制網格高度為 100% 的視窗高度 */
+    margin: 0 auto; /* 將網格置於頁面中央 */
+    overflow: auto; /* 若內容超出，啟用滾動條 */
+    border: 1px solid #cccccc00; /* 可選：加上邊框檢視範圍 */
+    scrollbar-color: #f1eeeb60 #8400ff00; /* 捲軸本體顏色 和 軌道顏色 */
+}
+
+#worldview .image-item {
+    display: flex;
+    flex-direction: column; /* 垂直方向排列 */
+    justify-content: flex-end; /* 圖片靠底部對齊 */
+    align-items: center; /* 圖片水平居中 */
+    padding-bottom: 20px; /* 控制圖片與最底部的間距 */
+}
+
+#worldview .image-item img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#worldview .image-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#worldview h3 {
+    text-align: center;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+/* 整體樣式 */
+.scrolling-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+  }
+  
+  /* 長條形背景圖容器 */
+  /*.scrolling-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    transition: transform 0.3s ease; /* 平滑移動效果 
+  }
+  
+  
+  .long-image {
+    height: 100%; /* 高度適配容器高度 
+    width: auto; /* 保持原始寬度比例 
+    object-fit: cover; /* 確保圖片保持比例顯示 
+  }*/
+
+  /* 長條形背景圖容器 */
+.scrolling-container {
+  position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    transition: transform 0.3s ease; /* 平滑移動效果 */
+}
+
+/* 背景圖片 */
+.long-image {
+  height: 100%; /* 高度根據寬度比例調整 */
+  max-width: auto; /* 防止圖片超出容器寬度 */
+  object-fit: cover; /* 確保圖片比例填充 */
+}
+  
+  /* 固定的前景圖層 */
+
+  .foreground-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none; /* 防止前景阻擋按鈕 */
+  }
+  
+  /* 前景圖片 */
+
+  .foreground-image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 左右移動按鈕 */
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* 背景設為透明 */
+    border: none; /* 移除邊框 */
+    padding: 0; /* 移除內邊距 */
+    width: 50px; /* 調整按鈕大小 */
+    height: 50px;
+    cursor: pointer;
+    z-index: 20;
+    border-radius: 50%; /* 可選，保持按鈕為圓形 */
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, left 0.3s ease, right 0.3s ease; /* 平滑過渡效果 */
+}
+  
+  .scroll-button.left {
+    /*position: absolute;*/
+    left: 2.5%;
+    top: 39%; /* 垂直居中，根據容器 */
+    /*transform: translateY(-50%); /* 調整垂直位置偏移量 */
+  }
+  
+  .scroll-button.right {
+    /*position: absolute;*/
+    top: 39%; /* 垂直位置，調整高低 
+    /*transform: translateY(-50%);*/ 
+    left: 11%;
+  }
+
+  .button-image {
+    width: 50%; /* 圖片寬度適配按鈕 */
+    height: 50%; /* 圖片高度適配按鈕 */
+    object-fit: contain; /* 確保圖片比例不變 */
+}
+
+/* 響應式設計：中等螢幕 */
+@media (max-width: 768px) {
+  .scroll-button {
+      width: 40px; /* 縮小按鈕尺寸 */
+      height: 40px;
+  }
+  .scroll-button.left {
+      left: calc(2.5% + 10px); /* 調整位置，保持響應式 */
+  }
+  .scroll-button.right {
+      right: calc(2.5% + 10px); /* 調整位置，保持響應式 */
+  }
+}
+
+/* 響應式設計：小螢幕 */
+@media (max-width: 480px) {
+  .scroll-button {
+      width: 30px; /* 進一步縮小按鈕尺寸 */
+      height: 30px;
+  }
+  .scroll-button.left {
+      left: calc(2.5% + 20px); /* 小螢幕位置微調 */
+  }
+  .scroll-button.right {
+      right: calc(2.5% + 20px); /* 小螢幕位置微調 */
+  }
+}
+
+
+
+
+  
+  .scroll-button:hover {
+    background-color: rgba(255, 255, 255, 0.116); /* 更改為藍色或其他色彩 */
+    color: white; /* 文字顏色變為白色 */
+    transform: translateY(-50%) scale(1.1); /* 鼠標懸停時略微放大 */
+  }
+
+
+  
+  /* 通用樣式 */
+#contact {
+  background: url('../image/table1.png') no-repeat center center / cover; /* 背景圖覆蓋整頁 */
+  padding: 60px 0; /* 上下內邊距 */
+}
+
+#contact .section-heading {
+  font-size: 2.5rem; /* 增大標題字體 */
+  font-weight: bold;
+  color: #221b16;
+  margin-bottom: 20px;
+}
+
+#contact .section-subheading {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+/* 表單樣式 */
+#contactForm .form-control {
+  border: 2px solid #60513F;
+  border-radius: 10px; /* 圓角 */
+  padding: 15px; /* 內邊距 */
+  background-color: #fff; 
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* 內陰影 */
+  transition: all 0.3s ease;
+}
+
+#contactForm .form-control:focus {
+  border-color: #635c4e; /* 聚焦時變*/
+  box-shadow: 0 0 10px rgba(255, 236, 68, 0.425); /* 添加聚焦陰影 */
+}
+
+/* 提交按鈕 */
+.btn-orange {
+  background: #201a1b; /* 按鈕主色 */
+  color: #fff; /* 按鈕文字顏色 */
+  padding: 15px 30px; /* 按鈕大小 */
+  font-size: 1.2rem; /* 字體大小 */
+  border-radius: 25px; /* 圓角按鈕 */
+  border: none; /* 無邊框 */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 236, 68, 0.425);
+}
+
+.btn-orange:hover {
+  background: #ffc711;
+  box-shadow: 0 0 10px rgba(255, 236, 68, 0.425);
+  transform: translateY(-2px); /* 鼠標懸停時的視覺效果 */
+}
+
+/* 行間距和間隔調整 */
+#contactForm .row {
+  gap: 20px; /* 增加表單欄位之間的間距 */
+}
+
+#contactForm .help-block.text-danger {
+  font-size: 0.9rem; /* 小字體提示 */
+  color: #ffffff; /* 提示文字顏色 */
+  margin-top: 5px;
+}
+
+

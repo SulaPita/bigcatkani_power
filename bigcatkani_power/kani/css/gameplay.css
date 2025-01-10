@@ -1,0 +1,87 @@
+/* 固定用 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* 禁止水平滾動 */
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+/* 通用區塊樣式 */
+.section {
+    width: 100%;
+    min-height: 100vh; /* 區塊最小高度為視窗高度 */
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    text-align: center; /* 文字置中 */
+    margin: 0px 0; /* 每個區塊之間增加空間 */
+}
+
+/* 第一頁樣式 */
+.page-1 {
+    background: url('../image/rollbg.jpg') no-repeat center center / cover; /* 背景圖覆蓋整頁 */
+    position: relative;
+}
+
+.foreground {
+    position: absolute;
+    width: 100%; /* 響應式寬度 */
+    
+    height: auto; /* 高度自適應 */
+    
+}
+
+.center-text {
+    position: absolute;
+    top: 50%; /* 垂直置中 */
+    left: 50%; /* 水平置中 */
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem; /* 字體大小 */
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* 文字陰影 */
+    padding: 10px; /* 增加內距 */
+}
+
+/* 第二到第六頁樣式 */
+.page-image {
+    width: 100%; 
+    height: auto; /* 高度保持比例 */
+}
+
+/* 第七頁樣式 */
+.page-7 {
+    background: url('../image/page_7.png') no-repeat center center / cover; /* 背景圖覆蓋整頁 */
+    position: relative;
+    
+}
+
+.top-text {
+    color: #20160d;
+    font-size: 2em;
+    line-height: 1.8;
+    max-width: 800px; /* 最大寬度限制 */
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 20px; /* 內外距調整 */
+    margin: 100px 0px 0px -1000px;
+}
+

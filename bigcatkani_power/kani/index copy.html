@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Project</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+    </style>
+    
+</head>
+<!-- Latest compiled and minfied CSS-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+   <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="image/star_achievement.png" alt="Game Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                <h1 class="h4 m-0">翠翠島嶼</h1>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#scrolling-page" class="nav-link text-white">這是哪裡？</a></li>
+                    <li class="nav-item"><a href="#worldview" class="nav-link text-white">小動物！</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">牠們是誰?</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pangolin_01.html" class="dropdown-item">穿山甲們</a></li>
+                            <li><a href="other.html" class="dropdown-item">穿山甲的好朋友！</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">遊戲介紹</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gameplay.html" class="dropdown-item">喀擦！</a></li>
+                            <li><a href="minigames.html" class="dropdown-item">如何遊玩？</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">動物專區</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="animals.html" class="dropdown-item">穿山甲是誰？</a></li>
+                            <li class="nav-item dropdown">
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <main class="">
+       <!-- Banner -->
+       <section id="banner" class="banner text-center bg-primary text-white">
+        <img src="image/banner_1.jpg" alt="Banner Image" class="w-100 h-100">
+        <img class="top-image" src="image/logo_1.png" alt="logo_1">
+        <div class="banner-content">
+            <h2>歡迎來到翠翠島嶼！</h2>
+            <p>這裡有好多好多小動物...</p>
+        </div>
+       </section>
+
+     <!-- Scrolling Section -->
+ <section id="scrolling-page" class="scrolling-page">
+    <!-- 長條形背景圖 -->
+    <!--div class="scrolling-container">
+      <img src="image/full.jpg "alt="Long Background" class="long-image">
+    </div-->
+
+    <div class="container-fluid">
+        <!-- 滾動背景容器 -->
+        <div class="scrolling-container">
+            <img src="image/full.jpg" alt="Long Background" class="long-image">
+        </div>
+    </div>
+    
+    <!-- 固定的前景圖片 -->
+    <div class="foreground-layer">
+      <img src="image/cccc_工作區域 1.png" alt="Foreground Image" class="foreground-image">
+    </div>
+    
+  
+    <!-- 左右移動按鈕 -->
+    
+     <!--button class="scroll-button left" onclick="scrollBackground(-50)">
+        <img src="image/left.png" alt="Left Arrow" class="button-image">
+      </button>
+      <button class="scroll-button right" onclick="scrollBackground(50)">
+        <img src="image/right.png" alt="Right Arrow" class="button-image">
+      </button>
+
+
+    </div-->
+
+    <div class="scroll-buttons">
+        <!-- 左移動按鈕 -->
+        <button class="scroll-button left" onclick="scrollBackground(-50)">
+            <img src="image/left.png" alt="Left Arrow" class="button-image">
+        </button>
+    
+        <!-- 右移動按鈕 -->
+        <button class="scroll-button right" onclick="scrollBackground(50)">
+            <img src="image/right.png" alt="Right Arrow" class="button-image">
+        </button>
+    </div>
+ </section>
+
+
+        <!-- Worldview -->
+        <section id="worldview" style= "background-image: url('image/table.png'); 
+           background-size: contain; 
+           background-size: cover; 
+           background-position: center; 
+           background-repeat: no-repeat; 
+           width: 100%; 
+           height: 100vh;">
+            <h3 class="mb-4 text-white"></h3>
+            <div class="image-grid">
+                <!-- 村長穿山甲 -->
+                <a href="pangolin_01.html" class="image-item">
+                    <img src="image/villagehead_p.png" alt="村長穿山甲" class="img-fluid">
+                </a>
+                <!-- 花花穿山甲 -->
+                <a href="pangolin_01.html" class="image-item">
+                    <img src="image/notailguy_p.png" alt="描述圖片2">
+                </a>
+                <!-- 流浪穿山甲 -->
+                <a href="pangolin_01.html" class="image-item">
+                    <img src="image/nohomeguy_p.png" alt="描述圖片3">
+                </a>
+                 <!-- 饕客穿山甲 -->
+                 <a href="pangolin_01.html" class="image-item">
+                    <img src="image/fatguy_p.png" alt="描述圖片3"style="width: 250px; height: auto;">
+                </a>
+                 <!-- 媽媽中毒寶寶穿山甲 -->
+                 <a href="pangolin_01.html" class="image-item">
+                    <img src="image/Poisonedbaby_p.png" alt="描述圖片3"style="width: 250px; height: auto;">
+                </a>
+                 <!-- 博士穿山甲 -->
+                 <a href="pangolin_01.html" class="image-item">
+                    <img src="image/PHd_p.png" alt="描述圖片3"style="width: 300px; height: auto;">
+                </a>
+                 <!-- 野狗 -->
+                 <a href="pangolin_01.html" class="image-item">
+                    <img src="image/dog.png" alt="描述圖片3"style="width: 400px; height: auto;">
+                </a>
+            </div>
+            
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <div class="mb-2">
+                <a href="https://youtube.com/TaipeiZoo" class="text-white me-3">Youtube</a>
+                <a href="https://www.facebook.com/TaipeiZoo" class="text-white me-3">Facebook</a>
+                <a href="https://www.zoo.gov.taipei/" class="text-white">Official TaipeiZoo</a>
+            </div>
+            <p class="mb-0">&copy; 2024 Game Company | <a href="#" class="text-white">About Us</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const container = document.querySelector('.scrolling-container');
+        const image = document.querySelector('.long-image');
+        const leftButton = document.getElementById('left-button');
+        const rightButton = document.getElementById('right-button');
+        
+        let currentOffset = 0;
+        
+        // 滾動背景圖函數
+        function scrollBackground(offset) {
+          const maxOffset = 0; // 左側邊界
+          const minOffset = -image.width + window.innerWidth; // 右側邊界，負值
+        
+          currentOffset += offset;
+        
+          // 確保偏移量不超出邊界
+          if (currentOffset > maxOffset) currentOffset = maxOffset;
+          if (currentOffset < minOffset) currentOffset = minOffset;
+        
+          // 更新背景圖的偏移
+          container.style.transform = `translateX(${currentOffset}px)`;
+        
+          // 更新按鈕狀態
+          updateButtonState();
+        }
+        
+        // 更新按鈕啟用狀態
+        function updateButtonState() {
+          const maxOffset = 0; // 左側邊界
+          const minOffset = -image.width + window.innerWidth; // 右側邊界，負值
+        
+          leftButton.disabled = currentOffset === maxOffset;
+          rightButton.disabled = currentOffset === minOffset;
+        }
+        
+        // 初始化按鈕狀態
+        window.onload = function () {
+          updateButtonState();
+        };
+        </script>
+</body>
+</html>

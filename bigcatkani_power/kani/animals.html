@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>穿山甲介紹</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <!-- Latest compiled JavaScript-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    
+</head>
+<link rel="stylesheet" href="css/animals.css">
+<body>
+
+    
+
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="image/star_achievement.png" alt="Game Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                <h1 class="h4 m-0">翠翠島嶼</h1>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html#scrolling-page" class="nav-link text-white">這是哪裡？</a></li>
+                    <li class="nav-item"><a href="index.html#worldview" class="nav-link text-white">小動物！</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">牠們是誰?</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pangolin_01.html" class="dropdown-item">穿山甲們</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">遊戲介紹</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gameplay.html#onepag" class="dropdown-item">喀擦！</a></li>
+                            <li><a href="gameplay.html#lagtpage" class="dropdown-item">如何遊玩？</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">動物專區</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="animals.html" class="dropdown-item">穿山甲是誰？</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+ <!-- 穿山甲滾動 -->
+ <div class="carousel-container">
+    <div class="center-text">置中顯示的文字</div>
+    <div class="carousel-slides">
+        <div class="carousel-slide">
+            <img src="image/pangolin_pic_01.jpg" alt="Image 1">
+            <div class="caption">圖/African Wildlife</div>
+        </div>
+        <div class="carousel-slide">
+            <img src="image/pangolin_pic_02.jpg" alt="Image 2">
+            <div class="caption">圖/ Suzi Eszterhas / Alamy</div>
+        </div>
+        <div class="carousel-slide">
+            <img src="image/pangolin_pic_03.jpg" alt="Image 3">
+            <div class="caption">圖/Byron Serrao / Getty</div>
+        </div>
+        <div class="carousel-slide">
+            <img src="image/pangolin_pic_04.png" alt="Image 4">
+            <div class="caption">圖/Wildlife at risk</div>
+        </div>
+        <div class="carousel-slide">
+            <img src="image/pangolin_pic_05.jpeg" alt="Image 5">
+            <div class="caption">圖/Greater good</div>
+        </div>
+    </div>
+    <div class="carousel-buttons">
+        <button class="carousel-button left">&lt;</button>
+        <button class="carousel-button right">&gt;</button>
+    </div>
+</div>
+
+
+
+    <section id="characters">
+        
+        <div class="image-container">
+            <img src="image/rollbg.jpg" class="background-img" alt="Background Image">
+            <!-- 左邊圖片 -->
+            <img src="image/tree_01.png" id="left-img" class="side-img" alt="Left Image">
+            <!-- 左邊圖片 -->
+            <img src="image/tree_01.png" id="left1-img" class="side-img" alt="Left Image">
+            <!-- 中間圖片 -->
+            <img src="image/PHd_p.png" id="man" alt="Center Image">
+            <!-- 右邊圖片 -->
+            <img src="image/tree_01.png" id="right-img" class="side-img" alt="Right Image">
+            <!-- 右邊圖片 -->
+            <img src="image/tree_01.png" id="right1-img" class="side-img" alt="Right Image">
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <h1 class="text-center">拯救世界上走私最嚴重的動物——穿山甲</h1>
+
+        <!-- 穿山甲介紹區域 -->
+        <div id="dynamic-content">
+            <div id="section1" class="content-container">
+                <img src="image/villagehead_p.png" alt="村長穿山甲" class="main-image">
+                <p class="text-content">　　有八個種類的穿山甲分佈在亞非等地，全都處於危險之中。自從2017年1月起，穿山甲的國際貿易被禁止，但走私活動仍在繼續。在東南亞，盜獵者把馬來穿山甲從陸路和海路走私到越南和中國，在這些地方，人們認為它們的肉和鱗片有藥用價值，因而被視為珍饈。</p>
+            </div>
+            <div id="section2" class="content-container">
+                <p class="text-content">　　數百萬年以來，穿山甲天生的鎧甲就是它最佳的防禦。它是唯一具有堅硬、板狀鱗片的哺乳動物，看起來像一隻身披鎖子甲的獾。只要存在一丁點的危險，穿山甲就會縮成一團，變成一隻緊密的球。捕食者幾乎不可能弄穿這層硬殼，它甚至可以抵抗獅子、老虎和豹子的牙齒。</p>
+                <img src="image/notailguy_p.png" alt="花花穿山甲" class="main-image">
+            </div>
+            <div id="section3" class="content-container">
+                <img src="image/nohomeguy_p.png" alt="流浪穿山甲" class="main-image">
+                <p class="text-content">　　亞洲和非洲分佈有八種穿山甲，它們都是夜行動物，並且是出了名的害羞，一天中大部分時間都躲在洞穴和樹洞裏。即使在自然棲息地工作的環保人士通常也很難發現它們。香港大學生物學家蒂莫西·博尼布雷克（Timothy Bonebrake）說："我還沒碰到過任何見過野生穿山甲的人。"</p>
+            </div>
+            <div id="section4" class="content-container">
+                <p class="text-content">　　幾十年前，這些動物可能直接在當地市場被售賣。如今，大多數都出口到數千英里外的海外市場。大多數消費者在中國大陸和越南。角質鱗片是傳統藥物的重要成分，而穿山甲的肉通常被當作宴會上的美味。理想的情況是，廚師把活的穿山甲放在餐桌前，在客人面前切開它的喉嚨，以保證肉的新鮮度。而隨著亞洲穿山甲數量的減少，非洲有越來越多的穿山甲被捕獵以滿足需求。</p>
+                <img src="image/fatguy_p.png" alt="饕客穿山甲" class="main-image">
+            </div>
+            <div id="section5" class="content-container">
+                <img src="image/Poisonedbaby_p.png" alt="媽媽中毒寶寶穿山甲" class="main-image">
+                <p class="text-content">　　國際自然保護聯盟（International Union for the Conservation of Nature）估計，在過去十年中，一共有100萬隻穿山甲跨越國界，使它成為世界上被走私買賣最多的哺乳動物。這一損失對更廣泛的環境的影響在很大程度上是未知的。"穿山甲的數量正在下降，但這會對生態系統產生影響嗎？我們不知道，但有可能穿山甲真的很重要。"例如，據信每一隻穿山甲每年吃7,000萬隻螞蟻和白蟻。"這對生態系統的循環來說非常重要。"如果沒有這種天然的蟲害控制，這些地區可能很快就會出現過多的昆蟲。</p>
+            </div>
+            <div id="section6" class="content-container">
+                <p class="text-content">"　　穿山甲已經面臨瀕危風險，而大多數人還未聽說過這種動物。"穿山甲的滅絶可能是因為類似的（但在科學上未經證實的）信仰。穿山甲的鱗片由角質素構成，那是與指甲和頭髮相同的東西，這意味著它應該沒有營養價值。但中醫認為它可以治癒一些病症。他們認為其益處部分是穿山甲在野外的行為而產生的。博尼布雷克實驗室的博士生程文達（Cheng Wenda，音譯）說："穿山甲鱗片首要的醫療用途是治療螞蟻叮咬，因為它們吃螞蟻。"而且因為穿山甲會鑽孔，所以有人相信它可以打開你身上的淤塞。"也許正是由於這些原因，一些中醫聲稱穿山甲的鱗片可以提高生育率，甚至可以對抗癌症。</p>
+                <img src="image/PHd_p.png" alt="博士穿山甲" class="main-image">
+            </div>
+            <div id="section7" class="content-container">
+                <p class="text-content">"如果我們這一代人快速行動起來，我們可能還有時間拯救穿山甲。</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <div class="mb-2">
+                <a href="https://youtube.com/TaipeiZoo" class="text-white me-3">Youtube</a>
+                <a href="https://www.facebook.com/TaipeiZoo" class="text-white me-3">Facebook</a>
+                <a href="https://www.zoo.gov.taipei/" class="text-white">Official TaipeiZoo</a>
+            </div>
+            <p class="mb-0">&copy; Pangolin love you | <a href="#" class="text-white">love you</a></p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GSAP 視差滾動代碼 -->
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+ 
+ // 設置初始狀態
+ gsap.set("#man", { scale: 1 });
+ gsap.set("#left-img", { x: 0 });
+ gsap.set("#right-img", { x: 0 });
+ 
+ // 滾動觸發效果
+ gsap.to("#man", {
+     scrollTrigger: {
+         trigger: "#characters",
+         start: "top center", // 滾動到 #characters 時觸發
+         end: "bottom center", // 滾動到 #characters 底部時結束
+         scrub: true, // 平滑滾動
+         markers: true, // 可選：調試標記
+     },
+     scale: 2, // 中間圖片放大到想要倍數
+ });
+ 
+ gsap.to("#left-img", {
+     scrollTrigger: {
+         trigger: "#characters",
+         start: "top center",
+         end: "bottom center",
+         scrub: true,
+     },
+     x: 180, // 左圖片往左移動
+     scale: 3, // 放大到想要倍
+ });
+ gsap.to("#left1-img", {
+     scrollTrigger: {
+         trigger: "#characters",
+         start: "top center",
+         end: "bottom center",
+         scrub: true,
+     },
+     x: -180, // 左圖片往左移動
+     scale: 4, // 放大到想要倍
+ });
+ 
+ gsap.to("#right-img", {
+     scrollTrigger: {
+         trigger: "#characters",
+         start: "top center",
+         end: "bottom center",
+         scrub: true,
+     },
+     x: -180, // 右圖片往右移動
+     scale: 3, // 放大
+ });
+
+ gsap.to("#right1-img", {
+     scrollTrigger: {
+         trigger: "#characters",
+         start: "top center",
+         end: "bottom center",
+         scrub: true,
+     },
+     x: 180, // 右圖片往右移動
+     scale: 4, // 放大
+ });
+ 
+ 
+ </script>
+
+<script>
+    const carouselContainer = document.querySelector('.carousel-container');
+    const slides = document.querySelector('.carousel-slides');
+    const slideCount = document.querySelectorAll('.carousel-slide').length;
+    const leftButton = document.querySelector('.carousel-button.left');
+    const rightButton = document.querySelector('.carousel-button.right');
+    const centerText = document.querySelector('.center-text');
+
+    let currentIndex = 0;
+
+    // 自動滾動
+    let autoScroll = setInterval(() => {
+        moveToNext();
+    }, 3000);
+
+    // 下一張
+    const moveToNext = () => {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateCarousel();
+    };
+
+    // 上一張
+    const moveToPrev = () => {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateCarousel();
+    };
+
+    // 更新輪播
+    const updateCarousel = () => {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    };
+
+    // 左右按鈕事件
+    leftButton.addEventListener('click', () => {
+        clearInterval(autoScroll); // 停止自動滾動
+        moveToPrev();
+    });
+
+    rightButton.addEventListener('click', () => {
+        clearInterval(autoScroll); // 停止自動滾動
+        moveToNext();
+    });
+
+    // 滑鼠拖曳效果
+    let isDragging = false; // 用於追蹤是否正在拖曳
+    let startX; // 用於記錄拖曳開始時滑鼠的 X 軸位置
+
+    slides.addEventListener('mousedown', (e) => {
+        isDragging = true; // 當滑鼠按下時，設置為拖曳狀態
+        startX = e.clientX;// 記錄當前滑鼠的 X 軸位置
+        carouselContainer.classList.add('dragging'); // 在拖曳時為 carouselContainer 添加一個 'dragging' 的 CSS 類別
+    });
+
+    window.addEventListener('mouseup', () => {
+        isDragging = false; // 當滑鼠放開時，結束拖曳狀態
+        carouselContainer.classList.remove('dragging');
+    });
+
+    slides.addEventListener('mousemove', (e) => {
+        if (!isDragging) return; // 如果當前不在拖曳狀態，直接返回，不執行後續程式
+        const moveX = e.clientX - startX; // 計算滑鼠移動的距離 (相對於拖曳開始時的 X 軸位置)
+        if (moveX > 50) { // 如果滑鼠向右移動的距離超過 50 像素
+            moveToPrev(); // 調用 moveToPrev 函數，執行移動到前一個動作
+            isDragging = false; // 結束拖曳狀態，不重複觸發
+        } else if (moveX < -50) {
+            moveToNext();
+            isDragging = false;
+        }
+    });
+</script>
+
+</body>
+
+
+</html>
